@@ -15,8 +15,12 @@ function gutenberg_starter_theme_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
+	} else {
+		global $post;
+		if ( isset( $post ) ) {
+			$classes[] = $post->post_type . '-' . $post->post_name;
+		}
 	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'gutenberg_starter_theme_body_classes' );

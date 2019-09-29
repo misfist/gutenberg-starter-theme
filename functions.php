@@ -23,6 +23,11 @@ require get_template_directory() . '/inc/enqueue.php';
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
+ * Add Widget areas.
+ */
+require get_template_directory() . '/inc/widgets.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
